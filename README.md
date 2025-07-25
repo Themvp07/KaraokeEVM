@@ -1,4 +1,4 @@
-# Karaoke Blockchain Voting App
+# Karaoke Blockchain Voting DApp
 
 [![Moonbase Alpha](https://img.shields.io/badge/Moonbase%20Alpha-Testnet-blueviolet)](https://docs.moonbeam.network/builders/get-started/networks/moonbase/)
 [![Solidity](https://img.shields.io/badge/Solidity-%5E0.8.20-blue)](https://soliditylang.org/)
