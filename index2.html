@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karaoke Blockchain</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Ethers.js v5 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"
+      type="application/javascript"
+    ></script>
+  </head>
+  <body>
+    <!-- Título -->
+    <h1 class="title" id="mainTitle">Karaoke Blockchain - Vota por tu Favorito</h1>
+    
+    <!-- Logo y mensaje en esquina superior derecha -->
+    <div class="logo-container">
+      <div class="logos">
+        <!-- Asegúrate de que el logo tenga bordes redondeados -->
+        <img src="./Imagen1.png" alt="Logo" class="logo">
+      </div>
+      <p class="demo-message">Demostración educativa para CodeanDOT</p>
+    </div>
+
+    <!-- Vista de inicio de sesión con MetaMask -->
+    <section class="login" id="loginSection">
+      <button onclick="connectWallet()">Conectar con MetaMask</button>
+    </section>
+
+    <!-- Vista principal después del inicio de sesión -->
+    <section class="form" id="mainSection" style="display: none;">
+      
+      <!-- Mostrar cuenta conectada -->
+      <div id="caccount"></div>
+      
+      <!-- Sección de Registro de Cantantes (solo para owner/admin) -->
+      <section id="adminSection" style="display:none; background-color: rgb(244 76 76 / 26%); padding: 15px; margin-bottom: 20px; border-radius: 10px;">
+        <h3>Registrar Nuevo Cantante (Admin)</h3>
+        <input type="text" id="singerName" placeholder="Nombre del Cantante" />
+        <button onclick="registerSinger()">Registrar Cantante</button>
+        <div id="registrationResult" style="margin-top: 10px; color: #90ee90;"></div>
+      </section>
+
+      <!-- Sección de Votación -->
+      <section id="votingSection">
+        <h3>Vota por tu Cantante Favorito</h3>
+        <p>Saldo disponible: <span id="userBalance">0</span> DEV</p>
+        
+        <div id="singersListContainer">
+          <p>Cargando cantantes...</p>
+        </div>
+        
+        <!-- Inputs para votar (se generan dinámicamente) -->
+        <div id="votingControls" style="margin-top: 20px;">
+          <label for="selectedSingerId">Selecciona un cantante:</label>
+          <select id="selectedSingerId"></select>
+          
+          <label for="voteAmount">Cantidad de DEV a votar:</label>
+          <input type="number" id="voteAmount" min="0.001" step="0.001" placeholder="0.01" />
+          
+          <button onclick="voteForSinger()">Votar</button>
+          <div id="voteTxnHash" style="margin-top: 10px;"></div>
+        </div>
+      </section>
+
+      <!-- Sección de Resultados -->
+      <section id="resultsSection" style="margin-top: 30px;">
+        <h3>Resultados de la Votación</h3>
+        <canvas id="resultsChart" width="400" height="200"></canvas>
+        <div id="resultsList"></div> <!-- Fallback o detalle adicional -->
+      </section>
+    </section>
+
+    <!-- Botón para desconectar MetaMask -->
+    <button onclick="disconnectWallet()" style="margin-top: 20px;">Desconectar de MetaMask</button>
+    
+    <!-- Script principal -->
+    <script defer src="./interect2.js"></script>
+  </body>
+</html>

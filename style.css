@@ -1,0 +1,382 @@
+/* Fondo gradiente con colores más saturados y oscuros */
+body {
+  background: linear-gradient(135deg, #d8a0c4, #b180d8, #9a60c2);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #4a2d4d; /* Morado oscuro para mejor contraste */
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Estilo para el título principal */
+.title {
+  text-align: center;
+  margin-top: 20px;
+  color: #5a1c8c; /* Morado más oscuro y vibrante */
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-right: 180px; /* Espacio para los logos */
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #ff5ac4, #b76dff);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Contenedor de logos */
+.logo-container {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.25); /* Ligeramente más opaco */
+  padding: 5px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Sombra más marcada */
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.logos {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.logo {
+  width: 180px;
+  height: 75px;
+  object-fit: contain;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0);
+  padding: 0px;
+  
+}
+
+.demo-message {
+  color: #5a1c8c;
+  font-size: 0.75rem;
+  margin-top: 8px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Sección de login */
+.login {
+  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login button {
+  padding: 16px 35px;
+  font-size: 1.3rem;
+  background: linear-gradient(to right, #ff4ac4, #b76dff);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(183, 109, 255, 0.5);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.login button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(183, 109, 255, 0.7);
+  background: linear-gradient(to right, #ff3ab4, #a75dee);
+}
+
+.login button:active {
+  transform: translateY(1px);
+}
+
+/* Sección principal */
+.form {
+  background: rgba(255, 255, 255, 0.459); /* Menos transparente */
+  border-radius: 20px;
+  padding: 25px;
+  margin-top: 30px;
+  box-shadow: 0 8px 30px rgba(90, 28, 140, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Cuenta conectada */
+#caccount {
+  color: #5a1c8c;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  padding: 10px;
+  background: rgba(230, 93, 164, 0.445); /* Rosa más oscuro */
+  border-radius: 12px;
+  border: 1px solid rgb(96, 37, 80);
+}
+
+/* Títulos de secciones */
+h3 {
+  color: #5a1c8c;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #ff5ac4, #b76dff);
+  border-radius: 2px;
+}
+
+/* Inputs y selects */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0 20px 0;
+  box-sizing: border-box;
+  border: 2px solid #d090e0; /* Borde más oscuro */
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo más blanco */
+  color: #4a2d4d;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #ff4ac4;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 74, 196, 0.3);
+  background-color: white;
+}
+
+/* Botones generales */
+button {
+  padding: 14px 25px;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #8a2be2, #b76dff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(138, 43, 226, 0.4);
+  margin: 8px 0;
+  width: 100%;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(138, 43, 226, 0.5);
+  background: linear-gradient(to right, #7a1bd2, #a75dee);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background: linear-gradient(to right, #bbbbbb, #888888);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Botón especial para votar */
+#votingControls button {
+  background: linear-gradient(to right, #ff4ac4, #ff7ecf);
+  border: 1px solid rgb(96, 37, 80);
+  box-shadow: 0 4px 10px rgba(255, 74, 196, 0.4);
+}
+
+#votingControls button:hover:not(:disabled) {
+  background: linear-gradient(to right, #ff3ab4, #ff6ebf);
+  box-shadow: 0 6px 15px rgba(255, 74, 196, 0.5);
+}
+
+/* Secciones */
+section {
+  margin-bottom: 30px;
+}
+
+/* Contenedor de lista de cantantes */
+#singersListContainer {
+  background: rgba(230, 93, 164, 0.445); 
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid rgb(96, 37, 80);
+}
+
+#singersListContainer p {
+  color: #5a1c8c;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Resultados */
+#resultsSection {
+  background: rgba(249, 190, 220, 0.4); /* Rosa más oscuro */
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 106, 212, 0.2);
+}
+
+#resultsSection h4 {
+  color: #5a1c8c;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+#resultsList ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#resultsList li {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-left: 4px solid #ff4ac4;
+}
+
+/* Gráfico */
+#resultsChart {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Mensajes de resultado */
+#registrationResult,
+#voteTxnHash {
+  font-size: 0.95rem;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#registrationResult {
+  background: rgba(144, 238, 144, 0.5);
+  color: #1b5e20;
+  border: 1px solid rgba(144, 238, 144, 0.7);
+}
+
+#voteTxnHash {
+  background: rgba(77, 166, 255, 0.4);
+  color: #0d47a1;
+  border: 1px solid rgba(77, 166, 255, 0.6);
+}
+
+#registrationResult a,
+#voteTxnHash a {
+  color: #5a1c8c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#registrationResult a:hover,
+#voteTxnHash a:hover {
+  text-decoration: underline;
+}
+
+/* Información de saldo */
+#userBalance {
+  font-weight: 700;
+  color: #5a1c8c;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #5a1c8c;
+}
+
+/* Responsive */
+@media (max-width: 688px) {
+  .title {
+    margin-right: 0;
+    font-size: 1.8rem;
+    padding: 0 15px;
+  }
+  
+  .logo-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  
+  .form {
+    padding: 20px 15px;
+  }
+  
+  .title::after {
+    width: 70px;
+  }
+  
+  h3::after {
+    width: 40px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select,
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  body {
+    padding: 15px;
+  }
+}
