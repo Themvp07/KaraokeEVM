@@ -25,7 +25,7 @@ This project is a decentralized web application (dApp) that allows users to part
 
 ## Project Structure
 
-Based on the provided `web.txt` file, your project structure likely includes:
+The project structure includes:
 
 *   `index.html`: Main application page.
 *   `style.css`: Stylesheet file for the application.
@@ -82,7 +82,7 @@ Este proyecto es una aplicación web descentralizada (dApp) que permite a los us
 
 ## Estructura del Proyecto
 
-Basado en el archivo `web.txt` proporcionado, la estructura de tu proyecto probablemente incluye:
+La estructura del proyecto incluye:
 
 *   `index.html`: Página principal de la aplicación.
 *   `style.css`: Archivo de estilos para la aplicación.
